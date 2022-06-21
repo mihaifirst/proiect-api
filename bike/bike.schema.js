@@ -1,4 +1,4 @@
-const { default: mongoose } = require("mongoose");
+const { mongoose } = require("mongoose");
 
 const bikeSchema = mongoose.Schema({
   name: String,
@@ -7,11 +7,8 @@ const bikeSchema = mongoose.Schema({
   color: String,
   weight: Number,
   typeOfBreaks: String,
-  isActive: Boolean
+  isActive: Boolean,
 });
 
-const bikeCollection = mongoose.model("Bike", bikeSchema);
-module.exports = bikeCollection;
-
-
-// name, noOfSpeeds, price, color, weight, typeOfBreaks
+const bikesCollection = mongoose.model("Bike", bikeSchema);
+module.exports = bikesCollection;
